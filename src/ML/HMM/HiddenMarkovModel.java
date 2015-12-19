@@ -6,6 +6,7 @@ import javafx.util.Pair;
 import java.util.*;
 
 public class HiddenMarkovModel {
+    private String name;
     private int numberOfStates;
     private int numberOfObservations;
     private Vector<String> states;
@@ -23,7 +24,8 @@ public class HiddenMarkovModel {
      * @param emissionMatrix A Hashtable that is the emission matrix between the states and the observations
      */
 
-    public HiddenMarkovModel(Vector<String> states, Vector<String> observations, Hashtable<String, Double> initialProbabilities, Hashtable<Pair<String, String>, Double> transitionMatrix, Hashtable<Pair<String, String>, Double> emissionMatrix) throws Exception {
+    public HiddenMarkovModel(String name, Vector<String> states, Vector<String> observations, Hashtable<String, Double> initialProbabilities, Hashtable<Pair<String, String>, Double> transitionMatrix, Hashtable<Pair<String, String>, Double> emissionMatrix) throws Exception {
+        this.name = name;
         this.states = states;
         this.numberOfStates = states.size();
         this.observations = observations;
