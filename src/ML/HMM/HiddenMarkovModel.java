@@ -1,4 +1,4 @@
-package com.company;
+package ML.HMM;
 
 
 import javafx.util.Pair;
@@ -23,21 +23,40 @@ public class HiddenMarkovModel {
      * @param emissionMatrix A Hashtable that is the emission matrix between the states and the observations
      */
 
-    public HiddenMarkovModel(Vector<String> states, Vector<String> observations, Hashtable<String, Double> initialProbabilities, Hashtable<Pair<String, String>, Double> transitionMatrix, Hashtable<Pair<String, String>, Double> emissionMatrix) {
-        if (states.size() != initialProbabilities.size()) {
-            try {
-                throw new Exception("Number of states isn't equal to the initial probabilities length");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+    public HiddenMarkovModel(Vector<String> states, Vector<String> observations, Hashtable<String, Double> initialProbabilities, Hashtable<Pair<String, String>, Double> transitionMatrix, Hashtable<Pair<String, String>, Double> emissionMatrix) throws Exception {
         this.states = states;
         this.numberOfStates = states.size();
         this.observations = observations;
         this.numberOfObservations = observations.size();
+
         this.initialProbabilities = initialProbabilities;
+        if (!this.validateInitialProbability(initialProbabilities))
+            throw new Exception("Initial Probabilities sum must be equal 1.0");
+        if (!this.validateInitialProbabilitiesAndStatesSizes(states.size(), initialProbabilities.size())) {
+            throw new Exception("States size and Initial Probabilities size must be equal");
+        }
+
         this.transitionMatrix = transitionMatrix;
+        if (!this.validateTransitionMatrix(transitionMatrix, states))
+            throw new Exception("Check your matrix elements");
+
         this.emissionMatrix = emissionMatrix;
+    }
+
+    public HiddenMarkovModel(String filepath) {
+
+    }
+
+    private boolean validateInitialProbability(Hashtable<String, Double> initialProbabilities) {
+        return Validator.getInstance().summationIsOne(initialProbabilities);
+    }
+
+    private boolean validateInitialProbabilitiesAndStatesSizes(int statesSize, int initialProbabilitiesSize) {
+        return Validator.getInstance().isEqualSize(statesSize, initialProbabilitiesSize);
+    }
+
+    private boolean validateTransitionMatrix(Hashtable<Pair<String, String>, Double> transitionMatrix, Vector<String> states) {
+        return Validator.getInstance().isValidTransitionMatrix(transitionMatrix, states);
     }
 
     /**
@@ -161,5 +180,7 @@ public class HiddenMarkovModel {
     public Double getInitialProbability(String state) {
         return this.initialProbabilities.get(state);
     }
+
+
 
 }
