@@ -7,7 +7,7 @@ import java.util.Hashtable;
 import java.util.Vector;
 
 /**
- * Created by ENG.AHMED HANI on 12/19/2015.
+ * Created by Ahmed Hani Ibrahim on 12/19/2015.
  */
 public class Validator {
     private static Validator ourInstance = new Validator();
