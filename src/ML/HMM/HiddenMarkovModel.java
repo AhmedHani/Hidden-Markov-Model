@@ -32,31 +32,64 @@ public class HiddenMarkovModel {
         this.initialProbabilities = initialProbabilities;
         if (!this.validateInitialProbability(initialProbabilities))
             throw new Exception("Initial Probabilities sum must be equal 1.0");
-        if (!this.validateInitialProbabilitiesAndStatesSizes(states.size(), initialProbabilities.size())) {
+        if (!this.validateInitialProbabilitiesAndStatesSizes(states.size(), initialProbabilities.size()))
             throw new Exception("States size and Initial Probabilities size must be equal");
-        }
 
         this.transitionMatrix = transitionMatrix;
         if (!this.validateTransitionMatrix(transitionMatrix, states))
-            throw new Exception("Check your matrix elements");
+            throw new Exception("Check the transition matrix elements");
 
         this.emissionMatrix = emissionMatrix;
+        if (!this.validateEmissionMatrix(emissionMatrix, states, observations))
+            throw new Exception("Check the emission matrix elements");
     }
 
     public HiddenMarkovModel(String filepath) {
 
     }
 
+    /**
+     *
+     * @param initialProbabilities A hashtable that is the initial probability vector of the states
+     * @return [True/False] which specifies if the vector elements are logically right or not
+     */
+
     private boolean validateInitialProbability(Hashtable<String, Double> initialProbabilities) {
         return Validator.getInstance().summationIsOne(initialProbabilities);
     }
+
+    /**
+     *
+     * @param statesSize int that is the states size
+     * @param initialProbabilitiesSize int the initial probabilities vector size
+     * @return [True/False] which specifies if the sizes are matched or not
+     */
 
     private boolean validateInitialProbabilitiesAndStatesSizes(int statesSize, int initialProbabilitiesSize) {
         return Validator.getInstance().isEqualSize(statesSize, initialProbabilitiesSize);
     }
 
+    /**
+     *
+     * @param transitionMatrix A Hashtable that is the transition matrix between the states
+     * @param states A Vector that is the states of the model
+     * @return [True/False] which specifies if the matrix elements are logically right or not
+     */
+
     private boolean validateTransitionMatrix(Hashtable<Pair<String, String>, Double> transitionMatrix, Vector<String> states) {
         return Validator.getInstance().isValidTransitionMatrix(transitionMatrix, states);
+    }
+
+    /**
+     *
+     * @param emissionMatrix A Hashtable that is the emission matrix between the states and the observations
+     * @param states A Vector that is the states of the model
+     * @param observations A Vector that is the model observations
+     * @return [True/False] True/False which specifies if the matrix elements are logically right or not
+     */
+
+    private boolean validateEmissionMatrix(Hashtable<Pair<String, String>, Double> emissionMatrix, Vector<String> states, Vector<String> observations) {
+        return Validator.getInstance().isValidEmissionMatrix(emissionMatrix, states, observations);
     }
 
     /**

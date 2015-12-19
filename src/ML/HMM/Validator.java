@@ -81,4 +81,42 @@ public class Validator {
 
         return true;
     }
+
+    public boolean isValidEmissionMatrix(Hashtable<Pair<String, String>, Double> emissionMatrix, Vector<String> states, Vector<String> observations) {
+        if (emissionMatrix.size() != observations.size() * states.size()) {
+            return false;
+        }
+
+        for (Pair<String, String> item : emissionMatrix.keySet()) {
+            boolean found = false;
+            double sum = 0.0;
+            for (int i = 0; i < states.size(); i++) {
+                for (int j = 0; j < observations.size(); j++) {
+                    if (item.getKey().equals(states.get(i)) && item.getValue().equals(observations.get(j))) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (found) break;
+            }
+
+            if (!found)
+                return false;
+
+            for (Pair<String, String> item2 : emissionMatrix.keySet()) {
+                if (item == item2)
+                    continue;
+
+                if (item.getKey().equals(item2.getKey())) {
+                    sum += emissionMatrix.get(item2);
+                }
+            }
+
+            if (sum != 1.0)
+                return false;
+        }
+
+        return true;
+    }
 }
