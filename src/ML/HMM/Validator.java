@@ -29,8 +29,24 @@ public class Validator {
         return sum == 1.0;
     }
 
-    public boolean isEqualSize(int first, int second) {
-        return first == second;
+    public boolean isValidInitialProbabilities(Vector<String> states, Hashtable<String, Double> initialProbabilities) {
+        if (states.size() != initialProbabilities.size())
+            return false;
+
+        for (int i = 0; i < states.size(); i++) {
+            boolean found = false;
+            for (String state : initialProbabilities.keySet()) {
+                if (state.equals(states.get(i))) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found)
+                return false;
+        }
+
+        return true;
     }
 
     public boolean isValidTransitionMatrix(Hashtable<Pair<String, String>, Double> transitionMatrix, Vector<String> states) {

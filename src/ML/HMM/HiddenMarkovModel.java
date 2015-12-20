@@ -34,7 +34,7 @@ public class HiddenMarkovModel {
         this.initialProbabilities = initialProbabilities;
         if (!this.validateInitialProbability(initialProbabilities))
             throw new Exception("Initial Probabilities sum must be equal 1.0");
-        if (!this.validateInitialProbabilitiesAndStatesSizes(states.size(), initialProbabilities.size()))
+        if (!this.validateInitialProbabilitiesAndStates(states, initialProbabilities))
             throw new Exception("States size and Initial Probabilities size must be equal");
 
         this.transitionMatrix = transitionMatrix;
@@ -62,13 +62,13 @@ public class HiddenMarkovModel {
 
     /**
      *
-     * @param statesSize int that is the states size
-     * @param initialProbabilitiesSize int the initial probabilities vector size
+     * @param states A Vector<String> that is the states of the model
+     * @param initialProbabilities A hashtable that is the initial probability vector of the states
      * @return [True/False] which specifies if the sizes are matched or not
      */
 
-    private boolean validateInitialProbabilitiesAndStatesSizes(int statesSize, int initialProbabilitiesSize) {
-        return Validator.getInstance().isEqualSize(statesSize, initialProbabilitiesSize);
+    private boolean validateInitialProbabilitiesAndStates(Vector<String> states, Hashtable<String, Double> initialProbabilities) {
+        return Validator.getInstance().isValidInitialProbabilities(states, initialProbabilities);
     }
 
     /**
