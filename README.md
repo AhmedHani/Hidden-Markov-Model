@@ -19,7 +19,7 @@ In model data, you put some information about the model, this enables you when y
 
 '''
 "modelInfo": {
-		"name": "HMM1",
+        "name": "HMM1",
 		"created_at": "19/12/2015",
 		"for": "testing"
 	}
