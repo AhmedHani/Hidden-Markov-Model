@@ -40,3 +40,6 @@ The second part is the model data which is the core of the HMM
 ```
 
 After I finish the API, I will show the format that the json must have to enable the API to read the data correctly.
+
+## Tutorials
+* [https://ahmedhanibrahim.wordpress.com/2015/10/25/hidden-markov-models-hmms-part-i/](https://ahmedhanibrahim.wordpress.com/2015/10/25/hidden-markov-models-hmms-part-i/)
