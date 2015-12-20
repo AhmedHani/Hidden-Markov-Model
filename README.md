@@ -17,19 +17,19 @@ I added this feature to help the user to avoid the hard-coding part when enterin
 The Json file is divided to 2 parts, the model info and model data.
 In model data, you put some information about the model, this enables you when you deal with large amount of models in your projects.
 
-'''
+```
 "modelInfo": {
         "name": "HMM1",
 		"created_at": "19/12/2015",
 		"for": "testing"
 	}
-'''
+```
 
 You can manually change these data as you wish.
 
 The second part is the model data which is the core of the HMM
 
-'''
+```
 "modelData": {
 				"states": "Ahmed, Hani",
 				"initial_prop": "Ahmed->0.8, Hani->0.2",
@@ -37,6 +37,6 @@ The second part is the model data which is the core of the HMM
 				"transition_matrix": "Ahmed->Ahmed->0.4, Ahmed->Hani->0.6, Hani->Ahmed->0.1, Hani->Hani->0.9",
 				"emission_matrix": "Ahmed->X->0.5, Ahmed->Y->0.5, Hani->X->0.4, Hani->Y->0.6"
 	}
-'''
+```
 
 After I finish the API, I will show the format that the json must have to enable the API to read the data correctly.
