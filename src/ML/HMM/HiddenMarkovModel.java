@@ -100,7 +100,16 @@ public class HiddenMarkovModel {
      */
 
     public int getNumberOfStates() {
-        return numberOfStates;
+        return this.numberOfStates;
+    }
+
+    /**
+     * Get the model states
+     * @return A Vector which is the states of the model
+     */
+
+    public Vector<String> getStates() {
+        return states;
     }
 
     /**
@@ -120,6 +129,12 @@ public class HiddenMarkovModel {
     public int getNumberOfObservations() {
         return numberOfObservations;
     }
+
+    /**
+     * Get the model observations
+     * @return A Vector which is the observations of the model
+     */
+    public Vector<String> getObservations() { return observations; }
 
     /**
      * Set the number of observations in the model
@@ -215,7 +230,4 @@ public class HiddenMarkovModel {
     public Double getInitialProbability(String state) {
         return this.initialProbabilities.get(state);
     }
-
-
-
 }
