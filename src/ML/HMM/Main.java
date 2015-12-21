@@ -27,12 +27,12 @@ public class Main {
 
         HiddenMarkovModel hmm = new HiddenMarkovModel(name, states, observations, initialProbabilities, transitionMatrix, emissionMatrix);
         Vector<String>sampleStates = new Vector<String>();
-        sampleStates.add("Hani");
         sampleStates.add("Ahmed");
-        Vector<String> sampleO = new Vector<String>();
-        sampleO.add("Y");
-        sampleO.add("X");
+        sampleStates.add("Hani");
 
+        Vector<String> sampleO = new Vector<String>();
+        sampleO.add("X");
+        sampleO.add("Y");
 
         System.out.println(hmm.evaluateUsingBruteForce(sampleStates, sampleO));
     }

@@ -25,15 +25,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ML/HMM/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.87281793" vertical-offset="210" max-vertical-offset="736">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="736">
+              <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1364#1372#0" expanded="true" />
-                <element signature="e#1488#1496#0" expanded="true" />
+                <element signature="e#1489#1497#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HiddenMarkovModel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HiddenMarkovModel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="3904">
-              <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.46391752" vertical-offset="3404" max-vertical-offset="3968">
+              <caret line="242" column="31" selection-start-line="242" selection-start-column="31" selection-end-line="242" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,9 +117,9 @@
         <option value="$PROJECT_DIR$/src/DA/Processing/DataDecoding.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/ML/HMM/Validator.java" />
-        <option value="$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java" />
         <option value="$PROJECT_DIR$/Resources/test_HMM.json" />
         <option value="$PROJECT_DIR$/src/ML/HMM/Main.java" />
+        <option value="$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java" />
       </list>
     </option>
   </component>
@@ -554,7 +554,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1364#1372#0" expanded="true" />
-            <element signature="e#1488#1496#0" expanded="true" />
+            <element signature="e#1489#1497#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -623,7 +623,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1364#1372#0" expanded="true" />
-            <element signature="e#1488#1496#0" expanded="true" />
+            <element signature="e#1489#1497#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -692,7 +692,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1364#1372#0" expanded="true" />
-            <element signature="e#1488#1496#0" expanded="true" />
+            <element signature="e#1489#1497#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -754,7 +754,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1364#1372#0" expanded="true" />
-            <element signature="e#1488#1496#0" expanded="true" />
+            <element signature="e#1489#1497#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -816,7 +816,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1364#1372#0" expanded="true" />
-            <element signature="e#1488#1496#0" expanded="true" />
+            <element signature="e#1489#1497#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -838,7 +838,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1364#1372#0" expanded="true" />
-            <element signature="e#1488#1496#0" expanded="true" />
+            <element signature="e#1489#1497#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -860,7 +860,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1364#1372#0" expanded="true" />
-            <element signature="e#1488#1496#0" expanded="true" />
+            <element signature="e#1489#1497#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -931,16 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="3904">
-          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/test_HMM.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.76" vertical-offset="0" max-vertical-offset="336">
@@ -951,12 +941,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ML/HMM/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87281793" vertical-offset="210" max-vertical-offset="736">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="736">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1364#1372#0" expanded="true" />
-            <element signature="e#1488#1496#0" expanded="true" />
+            <element signature="e#1489#1497#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46391752" vertical-offset="3404" max-vertical-offset="3968">
+          <caret line="242" column="31" selection-start-line="242" selection-start-column="31" selection-end-line="242" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

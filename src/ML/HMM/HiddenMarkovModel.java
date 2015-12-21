@@ -231,16 +231,20 @@ public class HiddenMarkovModel {
         return this.initialProbabilities.get(state);
     }
 
-    public Double evaluateUsingBruteForce(Vector<String> states, Vector<String> observations) {
+    public Double evaluateUsingBruteForce(Vector<String> states, Vector<String> observations) throws Exception {
+        if (states.size() != observations.size())
+            throw new Exception("States and Observations must be at a same size!");
+
         String previousState = "";
         double probability = 0.0;
 
         for (int i = 0; i < states.size(); i++) {
             double stateInitProb = this.getInitialProbability(states.get(i));
+            previousState = "";
             for (int j = 0; j < observations.size(); j++) {
                 double emissionValue = this.getEmissionValue(states.get(j), observations.get(j));
                 double transitionValue = 0.0;
-                if (i != 0) {
+                if (j != 0) {
                     transitionValue += this.getTransitionValue(previousState, states.get(j));
                     probability += stateInitProb * transitionValue * emissionValue;
                 } else {
