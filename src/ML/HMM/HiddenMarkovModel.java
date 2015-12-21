@@ -237,24 +237,26 @@ public class HiddenMarkovModel {
 
         String previousState = "";
         double probability = 0.0;
+        double result = 0.0;
 
         for (int i = 0; i < states.size(); i++) {
             double stateInitProb = this.getInitialProbability(states.get(i));
+            probability = stateInitProb;
             previousState = "";
             for (int j = 0; j < observations.size(); j++) {
                 double emissionValue = this.getEmissionValue(states.get(j), observations.get(j));
                 double transitionValue = 0.0;
                 if (j != 0) {
                     transitionValue += this.getTransitionValue(previousState, states.get(j));
-                    probability += stateInitProb * transitionValue * emissionValue;
-                } else {
-                    probability += stateInitProb;
+                    probability *= transitionValue * emissionValue;
                 }
+
                 previousState = states.get(j);
             }
+            result += probability;
         }
 
-        return Math.log10(probability);
+        return probability;
     }
 
 }

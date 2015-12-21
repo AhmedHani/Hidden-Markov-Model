@@ -7,10 +7,10 @@
 
 	"modelData": {
 				"states": "Ahmed, Hani",
-				"initial_prop": "Ahmed->0.4, Hani->0.6",
+				"initial_prop": "Ahmed->0.9, Hani->0.1",
 				"observations": "X, Y",
-				"transition_matrix": "Ahmed->Ahmed->0.4, Ahmed->Hani->0.6, Hani->Ahmed->0.1, Hani->Hani->0.9",
-				"emission_matrix": "Ahmed->X->0.5, Ahmed->Y->0.5, Hani->X->0.4, Hani->Y->0.6"
+				"transition_matrix": "Ahmed->Ahmed->0.9, Ahmed->Hani->0.1, Hani->Ahmed->0.9, Hani->Hani->0.1",
+				"emission_matrix": "Ahmed->X->0.9, Ahmed->Y->0.1, Hani->X->0.9, Hani->Y->0.1"
 	}
 
 }
