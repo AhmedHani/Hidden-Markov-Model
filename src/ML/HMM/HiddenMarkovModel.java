@@ -231,6 +231,14 @@ public class HiddenMarkovModel {
         return this.initialProbabilities.get(state);
     }
 
+    /**
+     * Calculate the probability to obtain this sequence of states and observations which is the Evaluation of the model
+     * @param states A Vector which is the sequence of model states
+     * @param observations A Vector which is the sequence of the model observations
+     * @return A Double The probability to get this sequence of states and observations
+     * @throws Exception The sizes of states and observations sequences must be the same.
+     */
+
     public Double evaluateUsingBruteForce(Vector<String> states, Vector<String> observations) throws Exception {
         if (states.size() != observations.size())
             throw new Exception("States and Observations must be at a same size!");
@@ -240,8 +248,7 @@ public class HiddenMarkovModel {
         double result = 0.0;
 
         for (int i = 0; i < states.size(); i++) {
-            double stateInitProb = this.getInitialProbability(states.get(i));
-            probability = stateInitProb;
+            probability = this.getInitialProbability(states.get(i));
             previousState = "";
             for (int j = 0; j < observations.size(); j++) {
                 double emissionValue = this.getEmissionValue(states.get(j), observations.get(j));
@@ -250,7 +257,6 @@ public class HiddenMarkovModel {
                     transitionValue += this.getTransitionValue(previousState, states.get(j));
                     probability *= transitionValue * emissionValue;
                 }
-
                 previousState = states.get(j);
             }
             result += probability;
