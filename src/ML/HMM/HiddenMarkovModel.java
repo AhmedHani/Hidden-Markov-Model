@@ -38,12 +38,12 @@ public class HiddenMarkovModel {
             throw new Exception("States size and Initial Probabilities size must be equal");
 
         this.transitionMatrix = transitionMatrix;
-        if (!this.validateTransitionMatrix(transitionMatrix, states))
-            throw new Exception("Check the transition matrix elements");
+        //if (!this.validateTransitionMatrix(transitionMatrix, states))
+            //throw new Exception("Check the transition matrix elements");
 
         this.emissionMatrix = emissionMatrix;
-        if (!this.validateEmissionMatrix(emissionMatrix, states, observations))
-            throw new Exception("Check the emission matrix elements");
+        //if (!this.validateEmissionMatrix(emissionMatrix, states, observations))
+          //  throw new Exception("Check the emission matrix elements");
     }
 
     public HiddenMarkovModel(String filepath) {
@@ -230,4 +230,27 @@ public class HiddenMarkovModel {
     public Double getInitialProbability(String state) {
         return this.initialProbabilities.get(state);
     }
+
+    public Double evaluateUsingBruteForce(Vector<String> states, Vector<String> observations) {
+        String previousState = "";
+        double probability = 0.0;
+
+        for (int i = 0; i < states.size(); i++) {
+            double stateInitProb = this.getInitialProbability(states.get(i));
+            for (int j = 0; j < observations.size(); j++) {
+                double emissionValue = this.getEmissionValue(states.get(j), observations.get(j));
+                double transitionValue = 0.0;
+                if (i != 0) {
+                    transitionValue += this.getTransitionValue(previousState, states.get(j));
+                    probability += stateInitProb * transitionValue * emissionValue;
+                } else {
+                    probability += stateInitProb;
+                }
+                previousState = states.get(j);
+            }
+        }
+
+        return Math.log10(probability);
+    }
+
 }
