@@ -53,9 +53,13 @@ public class Validator {
         if (transitionMatrix.size() != states.size() * states.size())
             return false;
 
-        Hashtable<String, Integer> frequency = new Hashtable<String, Integer>();
+        Hashtable<Pair<String, String>, Boolean> frequency = new Hashtable<Pair<String, String>, Boolean>();
 
-        for (int i = 0; i < states.size(); i++) {
+        /*for (Pair<String, String> item : transitionMatrix.keySet()) {
+            if ()
+        }*/
+
+        /*for (int i = 0; i < states.size(); i++) {
             int selfLoops = 0;
             int count = 0;
             for (Pair<String, String> item : transitionMatrix.keySet()) {
@@ -75,7 +79,7 @@ public class Validator {
                     return false;
                 }
             }
-        }
+        }*/
 
         Hashtable<Pair<String, String>, Boolean> visited = new Hashtable<Pair<String, String>, Boolean>();
 

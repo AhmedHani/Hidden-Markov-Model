@@ -17,8 +17,8 @@ public class HiddenMarkovModel {
 
     /**
      * A constructor that initialize the class attributes
-     * @param states A Vector<String> that is the states of the model
-     * @param observations  A Vector<String> that is the observations of the model
+     * @param states A Vector that is the states of the model
+     * @param observations  A Vector that is the observations of the model
      * @param initialProbabilities A Hashtable that is the initial probability vector of the states
      * @param transitionMatrix A Hashtable the transition matrix between the states
      * @param emissionMatrix A Hashtable that is the emission matrix between the states and the observations
