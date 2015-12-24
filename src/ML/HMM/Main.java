@@ -39,6 +39,16 @@ public class Main {
         sampleO.add("X");
 
         System.out.println(hmm.evaluateUsingBruteForce(sampleStates, sampleO));
+        System.out.println(hmm.evaluateUsingForward_Backward(sampleStates, sampleO));
+        Vector<String> test = new Vector<String>();
+        test.add("sdasdaddsad");
+        test.insertElementAt("ss", 0);
+
+        System.out.println(test.get(0));
+        System.out.println(test.get(1));
+        //System.out.println(hmm.calculateBackwardProbabilities(sampleStates, sampleO));
+
+        int x = 0;
     }
 
 }

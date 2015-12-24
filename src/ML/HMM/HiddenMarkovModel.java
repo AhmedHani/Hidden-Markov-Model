@@ -1,7 +1,9 @@
 package ML.HMM;
 
 
+import SA.Statistics.StatisticalOperations;
 import javafx.util.Pair;
+import sun.misc.ThreadGroupUtils;
 
 import java.util.*;
 
@@ -239,7 +241,7 @@ public class HiddenMarkovModel {
      * @throws Exception The sizes of states and observations sequences must be the same.
      */
 
-    public Double evaluateUsingBruteForce(Vector<String> states, Vector<String> observations) throws Exception {
+    public double evaluateUsingBruteForce(Vector<String> states, Vector<String> observations) throws Exception {
         if (states.size() != observations.size())
             throw new Exception("States and Observations must be at a same size!");
 
@@ -265,4 +267,85 @@ public class HiddenMarkovModel {
         return probability;
     }
 
+    public double evaluateUsingForward_Backward(Vector<String> states, Vector<String> observations) throws Exception {
+        if (observations.size() != states.size()) {
+            throw new Exception("States and Observations must be at a same size");
+        }
+
+        double result = 0.0;
+
+        Vector<Hashtable<String, Double>> alpha = this.calculateForwardProbabilities(states, observations);
+        alpha = StatisticalOperations.getInstance().normalize(alpha, states);
+        Vector<Hashtable<String, Double>> beta = this.calculateBackwardProbabilities(states, observations);
+        beta = StatisticalOperations.getInstance().normalize(beta, states);
+
+        /*for (int t = 0; t < states.size(); t++) {
+            for (int i = 0; i < alpha.size(); i++) {
+                sum1 += (alpha.get(t).get(states.get(i)));
+                sum2 += (beta.get(t).get(states.get(i)));
+            }
+        }
+
+        for (int t = 0; t < states.size(); t++) {
+            for (int i = 0; i < alpha.size(); i++) {
+                double current1 = (alpha.get(t).get(states.get(i)));
+                double current2 = (beta.get(t).get(states.get(i)));
+                alpha.elementAt(t).put(states.get(i), current1 / sum1);
+                beta.elementAt(t).put(states.get(i), current2 / sum2);
+            }
+        }*/
+
+        for (int t = 0; t < states.size(); t++) {
+            for (int i = 0; i < alpha.size(); i++) {
+                result += (alpha.get(t).get(states.get(i)) * beta.get(t).get(states.get(i)));
+            }
+        }
+
+        return result;
+    }
+
+    public Vector<Hashtable<String, Double>> calculateForwardProbabilities(Vector<String> states, Vector<String> observations) {
+        Vector<Hashtable<String, Double>> alpha = new Vector<Hashtable<String, Double>>();
+        alpha.add(new Hashtable<String, Double>());
+
+        for(int i = 0; i < states.size(); i++) {
+            alpha.elementAt(0).put(states.get(i), this.getInitialProbability(states.get(i)) * this.getEmissionValue(states.get(i), observations.get(0)));
+        }
+
+        for (int t = 1; t < states.size(); t++) {
+            alpha.add(new Hashtable<String, Double>());
+            for (int i = 0; i < states.size(); i++) {
+                double probability = 0.0;
+                for (int j = 0; j < states.size(); j++) {
+                    probability += alpha.elementAt(t - 1).get(states.get(j)) * this.getTransitionValue(states.get(j), states.get(i));
+                }
+                alpha.elementAt(t).put(states.get(i), probability * this.getEmissionValue(states.get(i), observations.get(t)));
+            }
+        }
+
+        return alpha;
+    }
+
+    public Vector<Hashtable<String, Double>> calculateBackwardProbabilities(Vector<String> states, Vector<String> observations) {
+        Vector<Hashtable<String, Double>> beta = new Vector<Hashtable<String, Double>>();
+        beta.add(new Hashtable<String, Double>());
+
+        for (int i = 0; i < states.size(); i++) {
+            beta.elementAt(0).put(states.get(i), 1.0);
+        }
+
+        for (int t = states.size() - 2; t >= 0; t--) {
+            beta.insertElementAt(new Hashtable<String, Double>(), 0);
+            for (int i = 0; i < states.size(); i++) {
+                double probability = 0.0;
+                for (int j = 0; j < states.size(); j++) {
+                    probability += beta.elementAt(1).get(states.get(j)) * this.getEmissionValue(states.get(j),
+                            observations.get(t)) * this.getTransitionValue(states.get(i), states.get(j));
+                }
+                beta.elementAt(0).put(states.get(i), probability);
+            }
+        }
+
+        return beta;
+    }
 }

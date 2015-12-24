@@ -1,0 +1,37 @@
+package SA.Statistics;
+
+import java.util.Hashtable;
+import java.util.Vector;
+
+/**
+ * Created by ENG.AHMED HANI on 12/24/2015.
+ */
+public class StatisticalOperations {
+    private static StatisticalOperations ourInstance = new StatisticalOperations();
+
+    public static StatisticalOperations getInstance() {
+        return ourInstance;
+    }
+
+    private StatisticalOperations() {
+    }
+
+    public Vector<Hashtable<String, Double>> normalize(Vector<Hashtable<String, Double>> probabilities, Vector<String> states) {
+        double sum = 0.0;
+
+        for (int t = 0; t < states.size(); t++) {
+            for (int i = 0; i < probabilities.size(); i++) {
+                sum += (probabilities.get(t).get(states.get(i)));
+            }
+        }
+
+        for (int t = 0; t < states.size(); t++) {
+            for (int i = 0; i < probabilities.size(); i++) {
+                double current = (probabilities.get(t).get(states.get(i)));
+                probabilities.elementAt(t).put(states.get(i), current / sum);
+            }
+        }
+
+        return probabilities;
+    }
+}
