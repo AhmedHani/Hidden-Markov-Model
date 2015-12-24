@@ -30,13 +30,13 @@ public class Main {
         sampleStates.add("Ahmed");
         sampleStates.add("Ahmed");
         sampleStates.add("Ahmed");
-        sampleStates.add("Ahmed");
+        //sampleStates.add("Ahmed");
 
         Vector<String> sampleO = new Vector<String>();
         sampleO.add("X");
         sampleO.add("X");
         sampleO.add("X");
-        sampleO.add("X");
+        //sampleO.add("X");
 
         System.out.println(hmm.evaluateUsingBruteForce(sampleStates, sampleO));
         System.out.println(hmm.evaluateUsingForward_Backward(sampleStates, sampleO));
