@@ -7,7 +7,7 @@ import sun.misc.ThreadGroupUtils;
 
 import java.util.*;
 
-public class HiddenMarkovModel {
+public class HMM_For_Testing {
     private String name;
     private int numberOfStates;
     private int numberOfObservations;
@@ -26,7 +26,7 @@ public class HiddenMarkovModel {
      * @param emissionMatrix A Hashtable that is the emission matrix between the states and the observations
      */
 
-    public HiddenMarkovModel(String name, Vector<String> states, Vector<String> observations, Hashtable<String, Double> initialProbabilities, Hashtable<Pair<String, String>, Double> transitionMatrix, Hashtable<Pair<String, String>, Double> emissionMatrix) throws Exception {
+    public HMM_For_Testing(String name, Vector<String> states, Vector<String> observations, Hashtable<String, Double> initialProbabilities, Hashtable<Pair<String, String>, Double> transitionMatrix, Hashtable<Pair<String, String>, Double> emissionMatrix) throws Exception {
         this.name = name;
         this.states = states;
         this.numberOfStates = states.size();
@@ -48,7 +48,7 @@ public class HiddenMarkovModel {
             throw new Exception("Check the emission matrix elements");
     }
 
-    public HiddenMarkovModel(String filepath) {
+    public HMM_For_Testing(String filepath) {
 
     }
 
@@ -283,7 +283,7 @@ public class HiddenMarkovModel {
         double result = 0.0;
 
         Vector<Hashtable<String, Double>> alpha = this.calculateForwardProbabilities(states, observations);
-       // alpha = StatisticalOperations.getInstance().normalize(alpha, states);
+        // alpha = StatisticalOperations.getInstance().normalize(alpha, states);
         Vector<Hashtable<String, Double>> beta = this.calculateBackwardProbabilities(states, observations);
         //beta = StatisticalOperations.getInstance().normalize(beta, states);
 
@@ -306,10 +306,17 @@ public class HiddenMarkovModel {
     public Vector<Hashtable<String, Double>> calculateForwardProbabilities(Vector<String> states, Vector<String> observations) {
         Vector<Hashtable<String, Double>> alpha = new Vector<Hashtable<String, Double>>();
         alpha.add(new Hashtable<String, Double>());
+        double sum1 = 0.0;
         for(int i = 0; i < states.size(); i++) {
             alpha.elementAt(0).put(states.get(i), this.getInitialProbability(states.get(i)) * this.getEmissionValue(states.get(i), observations.get(0)));
+            sum1 += this.getInitialProbability(states.get(i)) * this.getEmissionValue(states.get(i), observations.get(0));
         }
 
+        for(int i = 0; i < states.size(); i++) {
+            alpha.elementAt(0).put(states.get(i), alpha.elementAt(0).get(states.get(i)) * (1 / sum1));
+        }
+
+        sum1 = 0.0;
         for (int t = 1; t < states.size(); t++) {
             alpha.add(new Hashtable<String, Double>());
             for (int i = 0; i < states.size(); i++) {
@@ -318,6 +325,13 @@ public class HiddenMarkovModel {
                     probability += alpha.elementAt(t - 1).get(states.get(j)) * this.getTransitionValue(states.get(j), states.get(i));
                 }
                 alpha.elementAt(t).put(states.get(i), probability * this.getEmissionValue(states.get(i), observations.get(t)));
+                sum1 += probability * this.getEmissionValue(states.get(i), observations.get(t));
+            }
+        }
+
+        for (int t = 1; t < states.size(); t++) {
+            for (int i = 0; i < states.size(); i++) {
+                alpha.elementAt(t).put(states.get(i), alpha.elementAt(t).get(states.get(i)) * (1 / sum1));
             }
         }
 
@@ -334,10 +348,18 @@ public class HiddenMarkovModel {
     public Vector<Hashtable<String, Double>> calculateBackwardProbabilities(Vector<String> states, Vector<String> observations) {
         Vector<Hashtable<String, Double>> beta = new Vector<Hashtable<String, Double>>();
         beta.add(new Hashtable<String, Double>());
+        double sum1 = 0.0;
 
         for (int i = 0; i < states.size(); i++) {
             beta.elementAt(0).put(states.get(i), 1.0);
+            sum1 += 1.0;
         }
+
+        for (int i = 0; i < states.size(); i++) {
+            beta.elementAt(0).put(states.get(i), beta.elementAt(0).get(states.get(i)) * (1 / sum1));
+        }
+
+        sum1 = 0.0;
 
         for (int t = states.size() - 2; t >= 0; t--) {
             beta.insertElementAt(new Hashtable<String, Double>(), 0);
@@ -348,6 +370,13 @@ public class HiddenMarkovModel {
                             observations.get(t)) * this.getTransitionValue(states.get(i), states.get(j));
                 }
                 beta.elementAt(0).put(states.get(i), probability);
+                sum1 += probability;
+            }
+        }
+
+        for (int t = states.size() - 2; t >= 0; t--) {
+            for (int i = 0; i < states.size(); i++) {
+                beta.elementAt(0).put(states.get(i), beta.elementAt(0).get(states.get(i)) * (1 / sum1));
             }
         }
 

@@ -28,13 +28,13 @@ public class Main {
         HiddenMarkovModel hmm = new HiddenMarkovModel(name, states, observations, initialProbabilities, transitionMatrix, emissionMatrix);
         Vector<String>sampleStates = new Vector<String>();
         sampleStates.add("Ahmed");
-        //sampleStates.add("Ahmed");
+        sampleStates.add("Hani");
         sampleStates.add("Ahmed");
-        //sampleStates.add("Ahmed");
+        sampleStates.add("Hani");
 
         Vector<String> sampleO = new Vector<String>();
-        //sampleO.add("X");
-        //sampleO.add("X");
+        sampleO.add("X");
+        sampleO.add("X");
         sampleO.add("X");
         sampleO.add("X");
 
