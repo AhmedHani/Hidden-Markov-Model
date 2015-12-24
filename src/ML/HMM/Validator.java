@@ -108,9 +108,6 @@ public class Validator {
                 return false;
 
             for (Pair<String, String> item2 : emissionMatrix.keySet()) {
-                if (item == item2)
-                    continue;
-
                 if (item.getKey().equals(item2.getKey())) {
                     sum += emissionMatrix.get(item2);
                     count++;
