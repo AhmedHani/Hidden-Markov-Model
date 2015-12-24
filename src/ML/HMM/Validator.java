@@ -55,45 +55,28 @@ public class Validator {
 
         Hashtable<Pair<String, String>, Boolean> frequency = new Hashtable<Pair<String, String>, Boolean>();
 
-        /*for (Pair<String, String> item : transitionMatrix.keySet()) {
-            if ()
-        }*/
-
-        /*for (int i = 0; i < states.size(); i++) {
-            int selfLoops = 0;
-            int count = 0;
-            for (Pair<String, String> item : transitionMatrix.keySet()) {
-                if (item.getKey().equals(item.getValue())) {
-                    frequency.put(item.getKey(), selfLoops++);
-
-                    if (frequency.get(item.getKey()) > 1) {
-                        return false;
-                    }
-                }
-
-                if (item.getKey().equals(states.get(i)) || item.getValue().equals(states.get(i))) {
-                    count++;
-                }
-
-                if (count > 2 * states.size()) {
-                    return false;
-                }
+        for (Pair<String, String> item : transitionMatrix.keySet()) {
+            if (frequency.containsKey(item)) {
+                return false;
             }
-        }*/
+            frequency.put(item, true);
+        }
 
         Hashtable<Pair<String, String>, Boolean> visited = new Hashtable<Pair<String, String>, Boolean>();
 
         for (Pair<String, String> first : transitionMatrix.keySet()) {
             double sum = 0.0;
+            int entered = 0;
             String state = first.getKey();
             for (Pair<String, String> second: transitionMatrix.keySet()) {
                 if (state.equals(second.getKey()) && !visited.containsKey(second)) {
                     sum += transitionMatrix.get(second);
+                    entered++;
                     visited.put(second, true);
                 }
             }
 
-            if (sum != 1.0) {
+            if (sum != 1.0 && entered > 0) {
                 return false;
             }
         }
@@ -109,6 +92,7 @@ public class Validator {
         for (Pair<String, String> item : emissionMatrix.keySet()) {
             boolean found = false;
             double sum = 0.0;
+            int count = 0;
             for (int i = 0; i < states.size(); i++) {
                 for (int j = 0; j < observations.size(); j++) {
                     if (item.getKey().equals(states.get(i)) && item.getValue().equals(observations.get(j))) {
@@ -129,10 +113,11 @@ public class Validator {
 
                 if (item.getKey().equals(item2.getKey())) {
                     sum += emissionMatrix.get(item2);
+                    count++;
                 }
             }
 
-            if (sum != 1.0)
+            if (sum != 1.0 && count > 0)
                 return false;
         }
 

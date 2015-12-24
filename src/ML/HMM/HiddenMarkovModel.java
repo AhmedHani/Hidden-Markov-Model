@@ -38,12 +38,12 @@ public class HiddenMarkovModel {
             throw new Exception("States size and Initial Probabilities size must be equal");
 
         this.transitionMatrix = transitionMatrix;
-        //if (!this.validateTransitionMatrix(transitionMatrix, states))
-            //throw new Exception("Check the transition matrix elements");
+        if (!this.validateTransitionMatrix(transitionMatrix, states))
+            throw new Exception("Check the transition matrix elements");
 
         this.emissionMatrix = emissionMatrix;
-        //if (!this.validateEmissionMatrix(emissionMatrix, states, observations))
-          //  throw new Exception("Check the emission matrix elements");
+        if (!this.validateEmissionMatrix(emissionMatrix, states, observations))
+            throw new Exception("Check the emission matrix elements");
     }
 
     public HiddenMarkovModel(String filepath) {
