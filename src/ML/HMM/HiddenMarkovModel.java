@@ -283,9 +283,9 @@ public class HiddenMarkovModel {
         double result = 0.0;
 
         Vector<Hashtable<String, Double>> alpha = this.calculateForwardProbabilities(states, observations);
-       // alpha = StatisticalOperations.getInstance().normalize(alpha, states);
+        alpha = StatisticalOperations.getInstance().normalize(alpha, states);
         Vector<Hashtable<String, Double>> beta = this.calculateBackwardProbabilities(states, observations);
-        //beta = StatisticalOperations.getInstance().normalize(beta, states);
+        beta = StatisticalOperations.getInstance().normalize(beta, states);
 
         for (int t = 0; t < states.size(); t++) {
             for (int i = 0; i < alpha.size(); i++) {
