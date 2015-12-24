@@ -6,11 +6,11 @@
 	},
 
 	"modelData": {
-				"states": "Ahmed, Hani",
-				"initial_prop": "Ahmed->0.9, Hani->0.1",
-				"observations": "X, Y",
-				"transition_matrix": "Ahmed->Ahmed->0.9, Ahmed->Hani->0.1, Hani->Ahmed->0.9, Hani->Hani->0.1",
-				"emission_matrix": "Ahmed->X->0.9, Ahmed->Y->0.1, Hani->X->0.9, Hani->Y->0.1"
+				"states": "R, S, C",
+				"initial_prop": "R->0.3, S->0.4, C->0.3",
+				"observations": "F, U, D",
+				"transition_matrix": "R->R->0.2, R->S->0.1, R->C->0.7, S->R->0.3, S->S->0.4, S->C->0.3, C->R->0.1, C->S->0.4, C->C->0.5",
+				"emission_matrix": "R->F->0.4, R->U->0.5, R->D->0.1, S->F->0.4, S->U->0.0, S->D->0.6, C->F->0.4, C->U->0.2, C->D->0.4"
 	}
 
 }

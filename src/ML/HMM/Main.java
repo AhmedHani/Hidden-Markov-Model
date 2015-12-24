@@ -27,28 +27,20 @@ public class Main {
 
         HiddenMarkovModel hmm = new HiddenMarkovModel(name, states, observations, initialProbabilities, transitionMatrix, emissionMatrix);
         Vector<String>sampleStates = new Vector<String>();
-        sampleStates.add("Ahmed");
-        sampleStates.add("Hani");
-        sampleStates.add("Ahmed");
-        sampleStates.add("Hani");
+        sampleStates.add("S");
+        sampleStates.add("S");
+        sampleStates.add("R");
+        sampleStates.add("C");
 
         Vector<String> sampleO = new Vector<String>();
-        sampleO.add("X");
-        sampleO.add("X");
-        sampleO.add("X");
-        sampleO.add("X");
+        sampleO.add("D");
+        sampleO.add("F");
+        sampleO.add("F");
+        sampleO.add("U");
 
         System.out.println(hmm.evaluateUsingBruteForce(sampleStates, sampleO));
         System.out.println(hmm.evaluateUsingForward_Backward(sampleStates, sampleO));
-        Vector<String> test = new Vector<String>();
-        test.add("sdasdaddsad");
-        test.insertElementAt("ss", 0);
-
-        System.out.println(test.get(0));
-        System.out.println(test.get(1));
-        //System.out.println(hmm.calculateBackwardProbabilities(sampleStates, sampleO));
-
-        int x = 0;
+        System.out.println(hmm.evaluateUsingForwardAlgorithm(sampleStates, sampleO));
     }
 
 }
