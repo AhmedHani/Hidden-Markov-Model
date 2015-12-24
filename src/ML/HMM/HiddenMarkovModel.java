@@ -264,8 +264,16 @@ public class HiddenMarkovModel {
             result += probability;
         }
 
-        return probability;
+        return result;
     }
+
+    /**
+     * Calculate the probability to obtain this sequence of states and observations which is the Evaluation of the model
+     * @param states A Vector which is the sequence of model states
+     * @param observations A Vector which is the sequence of the model observations
+     * @return A Double The probability to get this sequence of states and observations
+     * @throws Exception The sizes of states and observations sequences must be the same.
+     */
 
     public double evaluateUsingForward_Backward(Vector<String> states, Vector<String> observations) throws Exception {
         if (observations.size() != states.size()) {
@@ -279,22 +287,6 @@ public class HiddenMarkovModel {
         Vector<Hashtable<String, Double>> beta = this.calculateBackwardProbabilities(states, observations);
         beta = StatisticalOperations.getInstance().normalize(beta, states);
 
-        /*for (int t = 0; t < states.size(); t++) {
-            for (int i = 0; i < alpha.size(); i++) {
-                sum1 += (alpha.get(t).get(states.get(i)));
-                sum2 += (beta.get(t).get(states.get(i)));
-            }
-        }
-
-        for (int t = 0; t < states.size(); t++) {
-            for (int i = 0; i < alpha.size(); i++) {
-                double current1 = (alpha.get(t).get(states.get(i)));
-                double current2 = (beta.get(t).get(states.get(i)));
-                alpha.elementAt(t).put(states.get(i), current1 / sum1);
-                beta.elementAt(t).put(states.get(i), current2 / sum2);
-            }
-        }*/
-
         for (int t = 0; t < states.size(); t++) {
             for (int i = 0; i < alpha.size(); i++) {
                 result += (alpha.get(t).get(states.get(i)) * beta.get(t).get(states.get(i)));
@@ -303,6 +295,13 @@ public class HiddenMarkovModel {
 
         return result;
     }
+
+    /**
+     * Calculate the forward probabilities Alpha as a part of Forward-Backward algorithm https://en.wikipedia.org/wiki/Forward%E2%80%93backward_algorithm
+     * @param states A Vector that is the model states
+     * @param observations A Vector that is the model observations
+     * @return A Vector which contains the alpha values
+     */
 
     public Vector<Hashtable<String, Double>> calculateForwardProbabilities(Vector<String> states, Vector<String> observations) {
         Vector<Hashtable<String, Double>> alpha = new Vector<Hashtable<String, Double>>();
@@ -325,6 +324,13 @@ public class HiddenMarkovModel {
 
         return alpha;
     }
+
+    /**
+     * Calculate the backward probabilities Beta as a part of Forward-Backward algorithm https://en.wikipedia.org/wiki/Forward%E2%80%93backward_algorithm
+     * @param states A Vector that is the model states
+     * @param observations A Vector that is the model observations
+     * @return A Vector which contains the Beta values
+     */
 
     public Vector<Hashtable<String, Double>> calculateBackwardProbabilities(Vector<String> states, Vector<String> observations) {
         Vector<Hashtable<String, Double>> beta = new Vector<Hashtable<String, Double>>();

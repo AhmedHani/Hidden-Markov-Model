@@ -4,7 +4,7 @@ import java.util.Hashtable;
 import java.util.Vector;
 
 /**
- * Created by ENG.AHMED HANI on 12/24/2015.
+ * Created by Ahmed Hani Ibrahim on 12/24/2015.
  */
 public class StatisticalOperations {
     private static StatisticalOperations ourInstance = new StatisticalOperations();
@@ -15,6 +15,13 @@ public class StatisticalOperations {
 
     private StatisticalOperations() {
     }
+
+    /**
+     * Probabilities Normalization
+     * @param probabilities A Hashtable which contains the probability values
+     * @param states A Vector which is the model states
+     * @return Normalized probabilities as a Hashtable
+     */
 
     public Vector<Hashtable<String, Double>> normalize(Vector<Hashtable<String, Double>> probabilities, Vector<String> states) {
         double sum = 0.0;
