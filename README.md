@@ -32,13 +32,15 @@ The second part is the model data which is the core of the HMM
 
 ```
 "modelData": {
-				"states": "Ahmed, Hani",
-				"initial_prop": "Ahmed->0.8, Hani->0.2",
-				"observations": "X, Y",
-				"transition_matrix": "Ahmed->Ahmed->0.4, Ahmed->Hani->0.6, Hani->Ahmed->0.1, Hani->Hani->0.9",
-				"emission_matrix": "Ahmed->X->0.5, Ahmed->Y->0.5, Hani->X->0.4, Hani->Y->0.6"
+				"states": "R, S, C",
+				"initial_prop": "R->0.3, S->0.4, C->0.3",
+				"observations": "F, U, D",
+				"transition_matrix": "R->R->0.2, R->S->0.1, R->C->0.7, S->R->0.3, S->S->0.4, S->C->0.3, C->R->0.1, C->S->0.4, C->C->0.5",
+				"emission_matrix": "R->F->0.4, R->U->0.5, R->D->0.1, S->F->0.4, S->U->0.0, S->D->0.6, C->F->0.4, C->U->0.2, C->D->0.4"
 	}
 ```
+
+![alt tag](https://ahmedhanibrahim.files.wordpress.com/2015/08/hmm1.png)
 
 After I finish the API, I will show the format that the json must have to enable the API to read the data correctly.
 
