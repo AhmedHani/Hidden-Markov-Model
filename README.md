@@ -7,8 +7,11 @@ are shown during sequential time instants. It has many applications such as weat
 
 After I finish the implementation, I will put the full tutorial of HMM and the javadoc of the API.
 
-## Features (continuously updating)
+## Implemented (continuously updating)
 * Json reader
+* Data Validation for an HMM
+* Forward-Backward Algorithm
+* Viterbi Algorithm
 
 ## Json Reader
 You can create your model using Json files. In the repository, you will see an example of a model written in a specific expression.
@@ -24,7 +27,6 @@ In model data, you put some information about the model, this enables you when y
 		"for": "testing"
 	}
 ```
-23/12/2015
 
 You can manually change these data as you wish.
 
@@ -42,7 +44,23 @@ The second part is the model data which is the core of the HMM
 
 ![alt tag](https://ahmedhanibrahim.files.wordpress.com/2015/08/hmm1.png)
 
-After I finish the API, I will show the format that the json must have to enable the API to read the data correctly.
+## How to use
+First of all, you should make an instance of the HMM class
+```
+HiddenMarkovModel hmm = new HiddenMarkovModel(name, states, observations, initialProbabilities, transitionMatrix, emissionMatrix);
+```
+You can create the HMM constructor parameters using 2 ways
+* Put your model data in a json file, then read it like that
+```
+JsonParser jp = new JsonParser("G:\\Github Repositories\\Hidden-Markov-Model\\Resources\\test_HMM.json");
+String name = DataDecoding.getInstance().getModelName(jp.getName());
+Vector<String> states = DataDecoding.getInstance().getStates(jp.getStates());
+Vector<String> observations = DataDecoding.getInstance().getObservations(jp.getObservations());
+Hashtable<String, Double> initialProbabilities = DataDecoding.getInstance().getInitialProbabilities(jp.getInitialProbabilities());
+Hashtable<Pair<String, String>, Double> transitionMatrix = DataDecoding.getInstance().getTransitionMatrix(jp.getTransitionMatrix());
+Hashtable<Pair<String, String>, Double> emissionMatrix = DataDecoding.getInstance().getEmissionMatrix(jp.getEmissionMatrix());
+```
+* Hard-code your parameters by setting the elements one by one for each parameter
 
 ## Tutorials
 * [https://ahmedhanibrahim.wordpress.com/2015/10/25/hidden-markov-models-hmms-part-i/](https://ahmedhanibrahim.wordpress.com/2015/10/25/hidden-markov-models-hmms-part-i/)

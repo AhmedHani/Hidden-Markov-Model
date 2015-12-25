@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.766666" vertical-offset="257" max-vertical-offset="848">
-              <caret line="40" column="3" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.81395346" vertical-offset="725" max-vertical-offset="1136">
+              <caret line="65" column="103" selection-start-line="65" selection-start-column="103" selection-end-line="65" selection-end-column="103" />
               <folding />
             </state>
           </provider>
@@ -92,8 +92,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ML/HMM/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="816">
-              <caret line="39" column="85" selection-start-line="39" selection-start-column="85" selection-end-line="39" selection-end-column="85" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="343" max-vertical-offset="816">
+              <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1513#1521#0" expanded="true" />
@@ -126,16 +126,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HiddenMarkovModel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HiddenMarkovModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76978415" vertical-offset="4527" max-vertical-offset="4944">
-              <caret line="461" column="1" selection-start-line="461" selection-start-column="1" selection-end-line="461" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="4175" max-vertical-offset="4592">
+              <caret line="399" column="32" selection-start-line="399" selection-start-column="32" selection-end-line="399" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#getTransitionValue#0;class#HiddenMarkovModel#0" expanded="false" />
+                <element signature="method#getEmissionValue#0;class#HiddenMarkovModel#0" expanded="false" />
                 <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
                 <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
                 <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+                <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
                 <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
                 <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
                 <element signature="e#16105#16132#0" expanded="true" />
@@ -159,9 +162,9 @@
         <option value="$PROJECT_DIR$/Resources/test_HMM.json" />
         <option value="$PROJECT_DIR$/src/SA/Statistics/StatisticalOperations.java" />
         <option value="$PROJECT_DIR$/src/ML/HMM/HMM_For_Testing.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/ML/HMM/Main.java" />
         <option value="$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -537,7 +540,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -638,9 +641,12 @@
           <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getTransitionValue#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#getEmissionValue#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="e#16105#16132#0" expanded="true" />
@@ -705,9 +711,12 @@
           <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getTransitionValue#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#getEmissionValue#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="e#16105#16132#0" expanded="true" />
@@ -744,9 +753,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getTransitionValue#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#getEmissionValue#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="e#16105#16132#0" expanded="true" />
@@ -811,9 +823,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getTransitionValue#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#getEmissionValue#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="e#16105#16132#0" expanded="true" />
@@ -895,9 +910,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getTransitionValue#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#getEmissionValue#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="e#16105#16132#0" expanded="true" />
@@ -961,9 +979,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getTransitionValue#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#getEmissionValue#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="e#16105#16132#0" expanded="true" />
@@ -1000,9 +1021,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getTransitionValue#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#getEmissionValue#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="e#16105#16132#0" expanded="true" />
@@ -1029,9 +1053,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getTransitionValue#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#getEmissionValue#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="e#16105#16132#0" expanded="true" />
@@ -1058,9 +1085,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getTransitionValue#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#getEmissionValue#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="e#16105#16132#0" expanded="true" />
@@ -1135,37 +1165,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.766666" vertical-offset="257" max-vertical-offset="848">
-          <caret line="40" column="3" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ML/HMM/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="816">
-          <caret line="39" column="85" selection-start-line="39" selection-start-column="85" selection-end-line="39" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1513#1521#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76978415" vertical-offset="4527" max-vertical-offset="4944">
-          <caret line="461" column="1" selection-start-line="461" selection-start-column="1" selection-end-line="461" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="4175" max-vertical-offset="4592">
+          <caret line="399" column="32" selection-start-line="399" selection-start-column="32" selection-end-line="399" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getTransitionValue#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#getEmissionValue#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="e#16105#16132#0" expanded="true" />
@@ -1173,6 +1184,28 @@
             <element signature="e#16293#16309#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ML/HMM/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="343" max-vertical-offset="816">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1513#1521#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.81395346" vertical-offset="725" max-vertical-offset="1136">
+          <caret line="65" column="103" selection-start-line="65" selection-start-column="103" selection-end-line="65" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>
