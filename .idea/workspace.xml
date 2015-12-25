@@ -57,23 +57,23 @@
       <file leaf-file-name="test_HMM.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/test_HMM.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.48" vertical-offset="0" max-vertical-offset="336">
+            <state vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="336">
               <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.72868216" vertical-offset="390" max-vertical-offset="848">
-              <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+            <state vertical-scroll-proportion="-12.766666" vertical-offset="257" max-vertical-offset="848">
+              <caret line="40" column="3" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -96,7 +96,6 @@
               <caret line="42" column="60" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1364#1372#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,8 +108,6 @@
               <caret line="384" column="1" selection-start-line="384" selection-start-column="1" selection-end-line="384" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#12032#12059#0" expanded="true" />
-                <element signature="e#14126#14153#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,31 +120,23 @@
               <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1470#1478#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HiddenMarkovModel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HiddenMarkovModel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5407" max-vertical-offset="5824">
-              <caret line="396" column="1" selection-start-line="396" selection-start-column="1" selection-end-line="396" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.75384617" vertical-offset="3943" max-vertical-offset="4608">
+              <caret line="372" column="0" selection-start-line="372" selection-start-column="0" selection-end-line="372" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4648#4649#0" expanded="true" />
-                <element signature="e#4680#4681#0" expanded="true" />
-                <element signature="e#4855#4856#0" expanded="true" />
-                <element signature="e#4897#4898#0" expanded="true" />
-                <element signature="e#5040#5041#0" expanded="true" />
-                <element signature="e#5069#5070#0" expanded="true" />
-                <element signature="e#9084#9085#0" expanded="true" />
-                <element signature="e#9117#9118#0" expanded="true" />
-                <element signature="e#9324#9325#0" expanded="true" />
-                <element signature="e#9356#9357#0" expanded="true" />
                 <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
-                <element signature="e#12074#12082#0" expanded="true" />
+                <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+                <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+                <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
+                <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -165,10 +154,10 @@
         <option value="$PROJECT_DIR$/src/ML/HMM/Validator.java" />
         <option value="$PROJECT_DIR$/Resources/test_HMM.json" />
         <option value="$PROJECT_DIR$/src/ML/HMM/Main.java" />
-        <option value="$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java" />
         <option value="$PROJECT_DIR$/src/SA/Statistics/StatisticalOperations.java" />
         <option value="$PROJECT_DIR$/src/ML/HMM/HMM_For_Testing.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java" />
       </list>
     </option>
   </component>
@@ -201,6 +190,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -308,7 +298,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -550,14 +539,12 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2683706" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15733737" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -565,12 +552,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28753993" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2683706" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28753993" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -634,7 +623,6 @@
           <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1364#1372#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -645,18 +633,11 @@
           <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4648#4649#0" expanded="true" />
-            <element signature="e#4680#4681#0" expanded="true" />
-            <element signature="e#4855#4856#0" expanded="true" />
-            <element signature="e#4897#4898#0" expanded="true" />
-            <element signature="e#5040#5041#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#9084#9085#0" expanded="true" />
-            <element signature="e#9117#9118#0" expanded="true" />
-            <element signature="e#9324#9325#0" expanded="true" />
-            <element signature="e#9356#9357#0" expanded="true" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#12074#12082#0" expanded="true" />
+            <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -705,7 +686,6 @@
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1364#1372#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -716,18 +696,11 @@
           <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4648#4649#0" expanded="true" />
-            <element signature="e#4680#4681#0" expanded="true" />
-            <element signature="e#4855#4856#0" expanded="true" />
-            <element signature="e#4897#4898#0" expanded="true" />
-            <element signature="e#5040#5041#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#9084#9085#0" expanded="true" />
-            <element signature="e#9117#9118#0" expanded="true" />
-            <element signature="e#9324#9325#0" expanded="true" />
-            <element signature="e#9356#9357#0" expanded="true" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#12074#12082#0" expanded="true" />
+            <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -738,7 +711,6 @@
           <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1364#1372#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -759,18 +731,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4648#4649#0" expanded="true" />
-            <element signature="e#4680#4681#0" expanded="true" />
-            <element signature="e#4855#4856#0" expanded="true" />
-            <element signature="e#4897#4898#0" expanded="true" />
-            <element signature="e#5040#5041#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#9084#9085#0" expanded="true" />
-            <element signature="e#9117#9118#0" expanded="true" />
-            <element signature="e#9324#9325#0" expanded="true" />
-            <element signature="e#9356#9357#0" expanded="true" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#12074#12082#0" expanded="true" />
+            <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -809,7 +774,6 @@
           <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1364#1372#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -830,18 +794,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4648#4649#0" expanded="true" />
-            <element signature="e#4680#4681#0" expanded="true" />
-            <element signature="e#4855#4856#0" expanded="true" />
-            <element signature="e#4897#4898#0" expanded="true" />
-            <element signature="e#5040#5041#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#9084#9085#0" expanded="true" />
-            <element signature="e#9117#9118#0" expanded="true" />
-            <element signature="e#9324#9325#0" expanded="true" />
-            <element signature="e#9356#9357#0" expanded="true" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#12074#12082#0" expanded="true" />
+            <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -880,7 +837,6 @@
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1364#1372#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -903,13 +859,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="128">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java">
@@ -918,18 +874,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4648#4649#0" expanded="true" />
-            <element signature="e#4680#4681#0" expanded="true" />
-            <element signature="e#4855#4856#0" expanded="true" />
-            <element signature="e#4897#4898#0" expanded="true" />
-            <element signature="e#5040#5041#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#9084#9085#0" expanded="true" />
-            <element signature="e#9117#9118#0" expanded="true" />
-            <element signature="e#9324#9325#0" expanded="true" />
-            <element signature="e#9356#9357#0" expanded="true" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#12074#12082#0" expanded="true" />
+            <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -950,7 +899,6 @@
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1364#1372#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -973,13 +921,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="128">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java">
@@ -988,18 +936,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4648#4649#0" expanded="true" />
-            <element signature="e#4680#4681#0" expanded="true" />
-            <element signature="e#4855#4856#0" expanded="true" />
-            <element signature="e#4897#4898#0" expanded="true" />
-            <element signature="e#5040#5041#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#9084#9085#0" expanded="true" />
-            <element signature="e#9117#9118#0" expanded="true" />
-            <element signature="e#9324#9325#0" expanded="true" />
-            <element signature="e#9356#9357#0" expanded="true" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#12074#12082#0" expanded="true" />
+            <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1020,7 +961,6 @@
           <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1364#1372#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1031,18 +971,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4648#4649#0" expanded="true" />
-            <element signature="e#4680#4681#0" expanded="true" />
-            <element signature="e#4855#4856#0" expanded="true" />
-            <element signature="e#4897#4898#0" expanded="true" />
-            <element signature="e#5040#5041#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#9084#9085#0" expanded="true" />
-            <element signature="e#9117#9118#0" expanded="true" />
-            <element signature="e#9324#9325#0" expanded="true" />
-            <element signature="e#9356#9357#0" expanded="true" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#12074#12082#0" expanded="true" />
+            <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1053,7 +986,6 @@
           <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1364#1372#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1064,18 +996,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4648#4649#0" expanded="true" />
-            <element signature="e#4680#4681#0" expanded="true" />
-            <element signature="e#4855#4856#0" expanded="true" />
-            <element signature="e#4897#4898#0" expanded="true" />
-            <element signature="e#5040#5041#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#9084#9085#0" expanded="true" />
-            <element signature="e#9117#9118#0" expanded="true" />
-            <element signature="e#9324#9325#0" expanded="true" />
-            <element signature="e#9356#9357#0" expanded="true" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#12074#12082#0" expanded="true" />
+            <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1086,7 +1011,6 @@
           <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1364#1372#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1097,18 +1021,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4648#4649#0" expanded="true" />
-            <element signature="e#4680#4681#0" expanded="true" />
-            <element signature="e#4855#4856#0" expanded="true" />
-            <element signature="e#4897#4898#0" expanded="true" />
-            <element signature="e#5040#5041#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#9084#9085#0" expanded="true" />
-            <element signature="e#9117#9118#0" expanded="true" />
-            <element signature="e#9324#9325#0" expanded="true" />
-            <element signature="e#9356#9357#0" expanded="true" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#12074#12082#0" expanded="true" />
+            <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1140,35 +1057,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5407" max-vertical-offset="5824">
-          <caret line="396" column="1" selection-start-line="396" selection-start-column="1" selection-end-line="396" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4648#4649#0" expanded="true" />
-            <element signature="e#4680#4681#0" expanded="true" />
-            <element signature="e#4855#4856#0" expanded="true" />
-            <element signature="e#4897#4898#0" expanded="true" />
-            <element signature="e#5040#5041#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#9084#9085#0" expanded="true" />
-            <element signature="e#9117#9118#0" expanded="true" />
-            <element signature="e#9324#9325#0" expanded="true" />
-            <element signature="e#9356#9357#0" expanded="true" />
-            <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#12074#12082#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SA/Statistics/StatisticalOperations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="566" max-vertical-offset="1008">
           <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1470#1478#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1179,8 +1073,6 @@
           <caret line="384" column="1" selection-start-line="384" selection-start-column="1" selection-end-line="384" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#12032#12059#0" expanded="true" />
-            <element signature="e#14126#14153#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1191,7 +1083,6 @@
           <caret line="42" column="60" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1364#1372#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1208,20 +1099,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/test_HMM.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.48" vertical-offset="0" max-vertical-offset="336">
+        <state vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="336">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.766666" vertical-offset="257" max-vertical-offset="848">
+          <caret line="40" column="3" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72868216" vertical-offset="390" max-vertical-offset="848">
-          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-          <folding />
+        <state vertical-scroll-proportion="0.75384617" vertical-offset="3943" max-vertical-offset="4608">
+          <caret line="372" column="0" selection-start-line="372" selection-start-column="0" selection-end-line="372" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

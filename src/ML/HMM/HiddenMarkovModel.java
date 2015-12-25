@@ -394,4 +394,9 @@ public class HiddenMarkovModel {
         return this.beta;
     }
 
+    public String getOptimalStateSequenceUsingViterbiAlgorithm(Vector<String> states, Vector<String> observations) {
+
+        return new String();
+    }
+
 }
