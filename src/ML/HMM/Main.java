@@ -30,17 +30,18 @@ public class Main {
         sampleStates.add("S");
         sampleStates.add("S");
         sampleStates.add("R");
-        sampleStates.add("C");
+        sampleStates.add("S");
 
         Vector<String> sampleO = new Vector<String>();
         sampleO.add("D");
-        sampleO.add("F");
-        sampleO.add("F");
         sampleO.add("U");
+        sampleO.add("F");
+        sampleO.add("F");
 
         System.out.println(hmm.evaluateUsingBruteForce(sampleStates, sampleO));
         System.out.println(hmm.evaluateUsingForward_Backward(sampleStates, sampleO));
         System.out.println(hmm.evaluateUsingForwardAlgorithm(sampleStates, sampleO));
+        hmm.getOptimalStateSequenceUsingViterbiAlgorithm(states, sampleO);
     }
 
 }

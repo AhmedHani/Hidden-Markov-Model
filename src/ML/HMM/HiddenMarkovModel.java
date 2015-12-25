@@ -395,8 +395,67 @@ public class HiddenMarkovModel {
     }
 
     public String getOptimalStateSequenceUsingViterbiAlgorithm(Vector<String> states, Vector<String> observations) {
+        String path = "";
+        Vector<Hashtable<String, Double>> dpTable = new Vector<Hashtable<String, Double>>();
+        Hashtable<String, Double> statesProbabilities = new Hashtable<String, Double>();
+        Hashtable<String, Double> priorProbabilities = new Hashtable<String, Double>();
 
-        return new String();
+        for (int i = 0; i < observations.size(); i++) {
+            if (i == 0) {
+                for (String state : states) {
+                    double initialProbability = this.getInitialProbability(state);
+                    double emissionProbability = this.getEmissionValue(state, observations.get(i));
+                    statesProbabilities.put(state, Math.log10(initialProbability) + Math.log10(emissionProbability));
+                }
+            } else {
+                for (String state : states) {
+                    double emissionProbability = this.getEmissionValue(state, observations.get(i));
+                    double bestProbability = -100000;
+
+                    for (String prevState : priorProbabilities.keySet()) {
+                        double transitionProbability = this.getTransitionValue(prevState, state);
+                        double accumulate = priorProbabilities.get(prevState) + Math.log10(emissionProbability) + Math.log10(transitionProbability);
+
+                        if (accumulate > bestProbability)
+                            bestProbability = accumulate;
+                    }
+                    statesProbabilities.put(state, bestProbability);
+                }
+            }
+
+            dpTable.add((Hashtable<String, Double>)statesProbabilities.clone());
+            priorProbabilities = (Hashtable<String, Double>) statesProbabilities.clone();
+        }
+
+        Hashtable<String, Double> lastColumn = dpTable.get(dpTable.size() - 1);
+        System.out.println(lastColumn);
+        Vector<String> statesSequence = new Vector<String>();
+        double totalCost = -1000000;
+
+        for (String item : lastColumn.keySet()) {
+            if (lastColumn.get(item) > totalCost) {
+                totalCost = lastColumn.get(item);
+            }
+        }
+
+        //System.out.println(totalCost);
+
+        for (Hashtable<String, Double> column : dpTable) {
+            System.out.println(column);
+            double costPerColumn = -1000000;
+            String targetState = "";
+            for (String state : column.keySet()) {
+                if (column.get(state) > costPerColumn) {
+                    costPerColumn = column.get(state);
+                    targetState = state;
+                }
+            }
+            path += targetState + " -> ";
+        }
+
+        path += "END with total cost = " + totalCost;
+        System.out.println(path);
+        return path;
     }
 
 }
