@@ -394,6 +394,13 @@ public class HiddenMarkovModel {
         return this.beta;
     }
 
+    /**
+     * Get the most optimal path for states to emit the given observations
+     * @param states A Vector which is the model states
+     * @param observations A Vector which represents the observations
+     * @return A String which holds the optimal path and the total cost
+     */
+
     public String getOptimalStateSequenceUsingViterbiAlgorithm(Vector<String> states, Vector<String> observations) {
         String path = "";
         Vector<Hashtable<String, Double>> dpTable = new Vector<Hashtable<String, Double>>();

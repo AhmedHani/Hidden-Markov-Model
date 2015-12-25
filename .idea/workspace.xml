@@ -129,18 +129,18 @@
       <file leaf-file-name="HiddenMarkovModel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.7002398" vertical-offset="4523" max-vertical-offset="5456">
-              <caret line="446" column="13" selection-start-line="446" selection-start-column="13" selection-end-line="446" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.76978415" vertical-offset="4527" max-vertical-offset="4944">
+              <caret line="461" column="1" selection-start-line="461" selection-start-column="1" selection-end-line="461" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
                 <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
                 <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
-                <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
                 <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
-                <element signature="e#15815#15842#0" expanded="true" />
-                <element signature="e#15915#15931#0" expanded="true" />
-                <element signature="e#16003#16019#0" expanded="true" />
+                <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+                <element signature="e#16105#16132#0" expanded="true" />
+                <element signature="e#16205#16221#0" expanded="true" />
+                <element signature="e#16293#16309#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -641,11 +641,11 @@
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#15815#15842#0" expanded="true" />
-            <element signature="e#15915#15931#0" expanded="true" />
-            <element signature="e#16003#16019#0" expanded="true" />
+            <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="e#16105#16132#0" expanded="true" />
+            <element signature="e#16205#16221#0" expanded="true" />
+            <element signature="e#16293#16309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -708,11 +708,11 @@
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#15815#15842#0" expanded="true" />
-            <element signature="e#15915#15931#0" expanded="true" />
-            <element signature="e#16003#16019#0" expanded="true" />
+            <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="e#16105#16132#0" expanded="true" />
+            <element signature="e#16205#16221#0" expanded="true" />
+            <element signature="e#16293#16309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -747,11 +747,11 @@
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#15815#15842#0" expanded="true" />
-            <element signature="e#15915#15931#0" expanded="true" />
-            <element signature="e#16003#16019#0" expanded="true" />
+            <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="e#16105#16132#0" expanded="true" />
+            <element signature="e#16205#16221#0" expanded="true" />
+            <element signature="e#16293#16309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -814,11 +814,11 @@
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#15815#15842#0" expanded="true" />
-            <element signature="e#15915#15931#0" expanded="true" />
-            <element signature="e#16003#16019#0" expanded="true" />
+            <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="e#16105#16132#0" expanded="true" />
+            <element signature="e#16205#16221#0" expanded="true" />
+            <element signature="e#16293#16309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -898,11 +898,11 @@
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#15815#15842#0" expanded="true" />
-            <element signature="e#15915#15931#0" expanded="true" />
-            <element signature="e#16003#16019#0" expanded="true" />
+            <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="e#16105#16132#0" expanded="true" />
+            <element signature="e#16205#16221#0" expanded="true" />
+            <element signature="e#16293#16309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -964,11 +964,11 @@
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#15815#15842#0" expanded="true" />
-            <element signature="e#15915#15931#0" expanded="true" />
-            <element signature="e#16003#16019#0" expanded="true" />
+            <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="e#16105#16132#0" expanded="true" />
+            <element signature="e#16205#16221#0" expanded="true" />
+            <element signature="e#16293#16309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1003,11 +1003,11 @@
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#15815#15842#0" expanded="true" />
-            <element signature="e#15915#15931#0" expanded="true" />
-            <element signature="e#16003#16019#0" expanded="true" />
+            <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="e#16105#16132#0" expanded="true" />
+            <element signature="e#16205#16221#0" expanded="true" />
+            <element signature="e#16293#16309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1032,11 +1032,11 @@
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#15815#15842#0" expanded="true" />
-            <element signature="e#15915#15931#0" expanded="true" />
-            <element signature="e#16003#16019#0" expanded="true" />
+            <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="e#16105#16132#0" expanded="true" />
+            <element signature="e#16205#16221#0" expanded="true" />
+            <element signature="e#16293#16309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1061,11 +1061,11 @@
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#15815#15842#0" expanded="true" />
-            <element signature="e#15915#15931#0" expanded="true" />
-            <element signature="e#16003#16019#0" expanded="true" />
+            <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="e#16105#16132#0" expanded="true" />
+            <element signature="e#16205#16221#0" expanded="true" />
+            <element signature="e#16293#16309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1159,18 +1159,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ML/HMM/HiddenMarkovModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7002398" vertical-offset="4523" max-vertical-offset="5456">
-          <caret line="446" column="13" selection-start-line="446" selection-start-column="13" selection-end-line="446" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.76978415" vertical-offset="4527" max-vertical-offset="4944">
+          <caret line="461" column="1" selection-start-line="461" selection-start-column="1" selection-end-line="461" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#evaluateUsingBruteForce#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForwardAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#evaluateUsingForward_Backward#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="method#calculateForwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
             <element signature="method#calculateBackwardProbabilities#0;class#HiddenMarkovModel#0" expanded="false" />
-            <element signature="e#15815#15842#0" expanded="true" />
-            <element signature="e#15915#15931#0" expanded="true" />
-            <element signature="e#16003#16019#0" expanded="true" />
+            <element signature="method#getOptimalStateSequenceUsingViterbiAlgorithm#0;class#HiddenMarkovModel#0" expanded="false" />
+            <element signature="e#16105#16132#0" expanded="true" />
+            <element signature="e#16205#16221#0" expanded="true" />
+            <element signature="e#16293#16309#0" expanded="true" />
           </folding>
         </state>
       </provider>
