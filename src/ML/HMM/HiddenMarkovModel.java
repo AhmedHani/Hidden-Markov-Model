@@ -405,7 +405,7 @@ public class HiddenMarkovModel {
                 for (String state : states) {
                     double initialProbability = this.getInitialProbability(state);
                     double emissionProbability = this.getEmissionValue(state, observations.get(i));
-                    statesProbabilities.put(state, Math.log10(initialProbability) + Math.log10(emissionProbability));
+                    statesProbabilities.put(state, Math.log(initialProbability) + Math.log(emissionProbability));
                 }
             } else {
                 for (String state : states) {
@@ -414,7 +414,7 @@ public class HiddenMarkovModel {
 
                     for (String prevState : priorProbabilities.keySet()) {
                         double transitionProbability = this.getTransitionValue(prevState, state);
-                        double accumulate = priorProbabilities.get(prevState) + Math.log10(emissionProbability) + Math.log10(transitionProbability);
+                        double accumulate = priorProbabilities.get(prevState) + Math.log(emissionProbability) + Math.log(transitionProbability);
 
                         if (accumulate > bestProbability)
                             bestProbability = accumulate;
@@ -428,8 +428,6 @@ public class HiddenMarkovModel {
         }
 
         Hashtable<String, Double> lastColumn = dpTable.get(dpTable.size() - 1);
-        System.out.println(lastColumn);
-        Vector<String> statesSequence = new Vector<String>();
         double totalCost = -1000000;
 
         for (String item : lastColumn.keySet()) {
@@ -438,10 +436,7 @@ public class HiddenMarkovModel {
             }
         }
 
-        //System.out.println(totalCost);
-
         for (Hashtable<String, Double> column : dpTable) {
-            System.out.println(column);
             double costPerColumn = -1000000;
             String targetState = "";
             for (String state : column.keySet()) {
@@ -454,8 +449,7 @@ public class HiddenMarkovModel {
         }
 
         path += "END with total cost = " + totalCost;
-        System.out.println(path);
+
         return path;
     }
-
 }

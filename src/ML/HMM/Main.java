@@ -28,7 +28,6 @@ public class Main {
         HiddenMarkovModel hmm = new HiddenMarkovModel(name, states, observations, initialProbabilities, transitionMatrix, emissionMatrix);
         Vector<String>sampleStates = new Vector<String>();
         sampleStates.add("S");
-        sampleStates.add("S");
         sampleStates.add("R");
         sampleStates.add("S");
 
@@ -36,12 +35,11 @@ public class Main {
         sampleO.add("D");
         sampleO.add("U");
         sampleO.add("F");
-        sampleO.add("F");
 
         System.out.println(hmm.evaluateUsingBruteForce(sampleStates, sampleO));
         System.out.println(hmm.evaluateUsingForward_Backward(sampleStates, sampleO));
         System.out.println(hmm.evaluateUsingForwardAlgorithm(sampleStates, sampleO));
-        hmm.getOptimalStateSequenceUsingViterbiAlgorithm(states, sampleO);
+        System.out.println(hmm.getOptimalStateSequenceUsingViterbiAlgorithm(states, sampleO));
     }
 
 }
