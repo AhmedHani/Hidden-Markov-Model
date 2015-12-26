@@ -459,4 +459,8 @@ public class HiddenMarkovModel {
 
         return path;
     }
+
+    public void estimateParametersUsingBaumWelchAlgorithm(Vector<String> states, Vector<String> observations) {
+        
+    }
 }
