@@ -37,7 +37,7 @@ public class Main {
         sampleO.add("F");
 
         System.out.println(hmm.evaluateUsingBruteForce(sampleStates, sampleO));
-        System.out.println(hmm.evaluateUsingForward_Backward(sampleStates, sampleO));
+        //System.out.println(hmm.evaluateUsingForward_Backward(sampleStates, sampleO));
         System.out.println(hmm.evaluateUsingForwardAlgorithm(sampleStates, sampleO));
         System.out.println(hmm.getOptimalStateSequenceUsingViterbiAlgorithm(states, sampleO));
     }

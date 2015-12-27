@@ -371,7 +371,7 @@ public class HiddenMarkovModel {
      * @return A Vector which contains the Beta values
      */
 
-    public Vector<Hashtable<String, Double>> calculateBackwardProbabilities(Vector<String> states, Vector<String> observations) {
+    private Vector<Hashtable<String, Double>> calculateBackwardProbabilities(Vector<String> states, Vector<String> observations) {
         this.beta = new Vector<Hashtable<String, Double>>();
         this.beta.add(new Hashtable<String, Double>());
 
@@ -461,6 +461,23 @@ public class HiddenMarkovModel {
     }
 
     public void estimateParametersUsingBaumWelchAlgorithm(Vector<String> states, Vector<String> observations) {
-        
+        double smoothing = 1.0;
+        this.alpha = this.calculateForwardProbabilities(states, observations);
+        this.beta = this.calculateBackwardProbabilities(states, observations);
+        Vector<Hashtable<String, Double>> gamma = new Vector<Hashtable<String, Double>>();
+
+        for (int i = 0; i < states.size(); i++) {
+            gamma.add(new Hashtable<String, Double>());
+            double probabilitySum = 0.0;
+            for (String state : states) {
+                double product = this.alpha.elementAt(i).get(state) * this.beta.elementAt(i).get(state);
+                gamma.elementAt(i).put(state, product);
+                probabilitySum += product;
+            }
+
+            for (String state : states) {
+                gamma.elementAt(i).put(state, gamma.elementAt(i).get(state) / probabilitySum);
+            }
+        }
     }
 }
