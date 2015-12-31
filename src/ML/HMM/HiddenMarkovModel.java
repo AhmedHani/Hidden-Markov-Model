@@ -314,10 +314,6 @@ public class HiddenMarkovModel {
      */
 
     public Vector<Double> evaluateUsingForward_Backward(Vector<String> states, Vector<String> observations) throws Exception {
-        if (observations.size() != states.size()) {
-            throw new Exception("States and Observations must be at a same size");
-        }
-
         Vector<Double> resultsVector = new Vector<Double>();
 
         this.alpha = this.calculateForwardProbabilities(states, observations);
@@ -351,7 +347,7 @@ public class HiddenMarkovModel {
            this.alpha.elementAt(0).put(states.get(i), this.getInitialProbability(states.get(i)) * this.getEmissionValue(states.get(i), observations.get(0)));
         }
 
-        for (int t = 1; t < states.size(); t++) {
+        for (int t = 1; t < observations.size(); t++) {
             this.alpha.add(new Hashtable<String, Double>());
             for (int i = 0; i < states.size(); i++) {
                 double probability = 0.0;
@@ -380,7 +376,7 @@ public class HiddenMarkovModel {
             this.beta.elementAt(0).put(states.get(i), 1.0);
         }
 
-        for (int t = states.size() - 2; t >= 0; t--) {
+        for (int t = observations.size() - 2; t >= 0; t--) {
             this.beta.insertElementAt(new Hashtable<String, Double>(), 0);
             for (int i = 0; i < states.size(); i++) {
                 double probability = 0.0;
@@ -464,7 +460,7 @@ public class HiddenMarkovModel {
     /**
      * Estimate the parameters of HMM which known as the learning approach for HMM
      * @param states A Vector which is the model states
-     * @param observations A Vector which is the model observations
+     * @param observations A Vector which is the sequence of observations
      * @param additiveSmoothing A boolean which indicates if the function will use the smoothing value or not to avoid zero values.
      */
 
@@ -474,7 +470,7 @@ public class HiddenMarkovModel {
         this.beta = this.calculateBackwardProbabilities(states, observations);
         Vector<Hashtable<String, Double>> gamma = new Vector<Hashtable<String, Double>>();
 
-        for (int i = 0; i < states.size(); i++) {
+        for (int i = 0; i < observations.size(); i++) {
             gamma.add(new Hashtable<String, Double>());
             double probabilitySum = 0.0;
             for (String state : states) {
@@ -482,6 +478,8 @@ public class HiddenMarkovModel {
                 gamma.elementAt(i).put(state, product);
                 probabilitySum += product;
             }
+            if (probabilitySum == 0)
+                continue;
 
             for (String state : states) {
                 gamma.elementAt(i).put(state, gamma.elementAt(i).get(state) / probabilitySum);
@@ -490,7 +488,7 @@ public class HiddenMarkovModel {
 
         Vector<Hashtable<String, Hashtable<String, Double>>> eps = new Vector<Hashtable<String, Hashtable<String, Double>>>();
 
-        for (int i = 0; i < states.size() - 1; i++) {
+        for (int i = 0; i < observations.size() - 1; i++) {
             double probabilitySum = 0.0;
             eps.add(new Hashtable<String, Hashtable<String, Double>>());
             for (String fromState : states) {
@@ -506,6 +504,9 @@ public class HiddenMarkovModel {
                  }
             }
 
+            if (probabilitySum == 0)
+                continue;
+
             for (String from : states) {
                 for (String to : states) {
                     eps.elementAt(i).get(from).put(to, eps.elementAt(i).get(from).get(to) / probabilitySum);
@@ -518,7 +519,7 @@ public class HiddenMarkovModel {
             this.initialProbabilities.put(state, updated);
 
             double gammaProbabilitySum = 0.0;
-            for (int i = 0; i < states.size() - 1; i++) {
+            for (int i = 0; i < observations.size() - 1; i++) {
                 gammaProbabilitySum += gamma.elementAt(i).get(state);
             }
 
@@ -526,7 +527,7 @@ public class HiddenMarkovModel {
                 double denominator = gammaProbabilitySum + smoothing * states.size();
                 for (String to : states) {
                     double epsSum = 0.0;
-                    for (int i = 0; i < states.size() - 1; i++) {
+                    for (int i = 0; i < observations.size() - 1; i++) {
                         epsSum += eps.elementAt(i).get(state).get(to);
                         this.transitionMatrix.put(new Pair<String, String>(state, to), (smoothing + epsSum) / denominator);
                     }
@@ -539,27 +540,27 @@ public class HiddenMarkovModel {
 
             gammaProbabilitySum = 0.0;
 
-            for (int i = 0; i < states.size(); i++) {
+            for (int i = 0; i < observations.size(); i++) {
                 gammaProbabilitySum += gamma.elementAt(i).get(state);
             }
 
             Hashtable<String, Double> emissionProbabilitySums = new Hashtable<String, Double>();
 
-            for (String observation : observations) {
+            for (String observation : this.observations) {
                 emissionProbabilitySums.put(observation, 0.0);
             }
 
-            for (int i = 0; i < states.size(); i++) {
+            for (int i = 0; i < observations.size(); i++) {
                 emissionProbabilitySums.put(observations.elementAt(i), emissionProbabilitySums.get(observations.elementAt(i)) + gamma.elementAt(i).get(state));
             }
 
             if (gammaProbabilitySum > 0) {
                 double denominator = gammaProbabilitySum + smoothing * observations.size();
-                for (String observation : observations) {
+                for (String observation : this.observations) {
                     this.emissionMatrix.put(new Pair<String, String>(state, observation), (smoothing + emissionProbabilitySums.get(observation)) / denominator);
                 }
             } else {
-                for (String observation : observations) {
+                for (String observation : this.observations) {
                     this.emissionMatrix.put(new Pair<String, String>(state, observation), 0.0);
                 }
             }

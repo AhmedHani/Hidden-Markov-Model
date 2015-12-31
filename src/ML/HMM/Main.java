@@ -27,21 +27,50 @@ public class Main {
 
         HiddenMarkovModel hmm = new HiddenMarkovModel(name, states, observations, initialProbabilities, transitionMatrix, emissionMatrix);
         Vector<String>sampleStates = new Vector<String>();
-        sampleStates.add("S");
         sampleStates.add("R");
         sampleStates.add("S");
+        sampleStates.add("R");
+        sampleStates.add("R");
+        sampleStates.add("S");
+        sampleStates.add("R");
+        sampleStates.add("R");
+        sampleStates.add("S");
+        sampleStates.add("R");
+        sampleStates.add("R");
+        sampleStates.add("S");
+        sampleStates.add("R");
+
+       // sampleStates.add("R");
 
         Vector<String> sampleO = new Vector<String>();
+        sampleO.add("U");
         sampleO.add("D");
-        sampleO.add("F");
-        sampleO.add("F");
+        sampleO.add("U");
+        sampleO.add("U");
+        sampleO.add("D");
+        sampleO.add("U");
+        sampleO.add("U");
+        sampleO.add("D");
+        sampleO.add("U");
+        sampleO.add("U");
+        sampleO.add("D");
+        sampleO.add("U");
+        //sampleO.add("U");
+
+        //sampleO.add("U");
+        //sampleO.add("D");
+      //  sampleO.add("U");
 
         System.out.println(hmm.evaluateUsingBruteForce(sampleStates, sampleO));
         System.out.println(hmm.evaluateUsingForwardAlgorithm(sampleStates, sampleO));
-        System.out.println(hmm.getOptimalStateSequenceUsingViterbiAlgorithm(states, sampleO));
-        hmm.estimateParametersUsingBaumWelchAlgorithm(states, observations, false);
+       // System.out.println(hmm.getOptimalStateSequenceUsingViterbiAlgorithm(states, sampleO));
+        hmm.estimateParametersUsingBaumWelchAlgorithm(states, sampleO, false);
         System.out.println(hmm.getInitialProbabilities());
         System.out.println(hmm.getTransitionMatrix());
+        System.out.println(hmm.getEmissionMatrix());
+        System.out.println(hmm.evaluateUsingBruteForce(sampleStates, sampleO));
+        System.out.println(hmm.evaluateUsingForwardAlgorithm(sampleStates, sampleO));
+
     }
 
 }
