@@ -460,8 +460,8 @@ public class HiddenMarkovModel {
         return path;
     }
 
-    public void estimateParametersUsingBaumWelchAlgorithm(Vector<String> states, Vector<String> observations) {
-        double smoothing = 1.0;
+    public void estimateParametersUsingBaumWelchAlgorithm(Vector<String> states, Vector<String> observations, boolean additiveSmoothing) {
+        double smoothing = additiveSmoothing ? 1.0 : 0.0;
         this.alpha = this.calculateForwardProbabilities(states, observations);
         this.beta = this.calculateBackwardProbabilities(states, observations);
         Vector<Hashtable<String, Double>> gamma = new Vector<Hashtable<String, Double>>();
@@ -482,7 +482,7 @@ public class HiddenMarkovModel {
 
         Vector<Hashtable<String, Hashtable<String, Double>>> eps = new Vector<Hashtable<String, Hashtable<String, Double>>>();
 
-        for (int i = 0; i < states.size(); i++) {
+        for (int i = 0; i < states.size() - 1; i++) {
             double probabilitySum = 0.0;
             eps.add(new Hashtable<String, Hashtable<String, Double>>());
             for (String fromState : states) {
@@ -491,7 +491,7 @@ public class HiddenMarkovModel {
                     double tempProbability = this.alpha.elementAt(i).get(fromState)
                             * this.beta.elementAt(i + 1).get(toState)
                             * this.getTransitionValue(fromState, toState)
-                            * this.getEmissionValue(toState, states.elementAt(i + 1));
+                            * this.getEmissionValue(toState, observations.elementAt(i + 1));
 
                      eps.elementAt(i).get(fromState).put(toState, tempProbability);
                     probabilitySum += tempProbability;

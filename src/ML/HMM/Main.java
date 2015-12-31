@@ -33,13 +33,16 @@ public class Main {
 
         Vector<String> sampleO = new Vector<String>();
         sampleO.add("D");
-        sampleO.add("U");
+        sampleO.add("F");
         sampleO.add("F");
 
         System.out.println(hmm.evaluateUsingBruteForce(sampleStates, sampleO));
         //System.out.println(hmm.evaluateUsingForward_Backward(sampleStates, sampleO));
         System.out.println(hmm.evaluateUsingForwardAlgorithm(sampleStates, sampleO));
         System.out.println(hmm.getOptimalStateSequenceUsingViterbiAlgorithm(states, sampleO));
+        hmm.estimateParametersUsingBaumWelchAlgorithm(states, observations);
+        System.out.println(hmm.getInitialProbabilities());
+        System.out.println(hmm.getTransitionMatrix());
     }
 
 }
