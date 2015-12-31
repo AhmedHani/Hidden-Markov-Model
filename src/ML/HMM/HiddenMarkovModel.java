@@ -460,6 +460,13 @@ public class HiddenMarkovModel {
         return path;
     }
 
+    /**
+     * Estimate the parameters of HMM which known as the learning approach for HMM
+     * @param states A Vector which is the model states
+     * @param observations A Vector which is the model observations
+     * @param additiveSmoothing A boolean which indicates if the function will use the smoothing value or not to avoid zero values.
+     */
+
     public void estimateParametersUsingBaumWelchAlgorithm(Vector<String> states, Vector<String> observations, boolean additiveSmoothing) {
         double smoothing = additiveSmoothing ? 1.0 : 0.0;
         this.alpha = this.calculateForwardProbabilities(states, observations);
