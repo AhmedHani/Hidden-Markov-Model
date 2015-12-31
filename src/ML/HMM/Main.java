@@ -63,7 +63,7 @@ public class Main {
 
         System.out.println(hmm.evaluateUsingBruteForce(sampleStates, sampleO));
         System.out.println(hmm.evaluateUsingForwardAlgorithm(sampleStates, sampleO));
-       // System.out.println(hmm.getOptimalStateSequenceUsingViterbiAlgorithm(states, sampleO));
+        System.out.println(hmm.getOptimalStateSequenceUsingViterbiAlgorithm(states, sampleO));
         hmm.estimateParametersUsingBaumWelchAlgorithm(states, sampleO, false);
         System.out.println(hmm.getInitialProbabilities());
         System.out.println(hmm.getTransitionMatrix());

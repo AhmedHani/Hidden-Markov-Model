@@ -337,7 +337,7 @@ public class HiddenMarkovModel {
     /**
      * Calculate the forward probabilities Alpha as a part of Forward-Backward algorithm https://en.wikipedia.org/wiki/Forward%E2%80%93backward_algorithm
      * @param states A Vector that is the model states
-     * @param observations A Vector that is the model observations
+     * @param observations A Vector that represents the observations sequence
      * @return A Vector which contains the alpha values
      */
 
@@ -364,7 +364,7 @@ public class HiddenMarkovModel {
     /**
      * Calculate the backward probabilities Beta as a part of Forward-Backward algorithm https://en.wikipedia.org/wiki/Forward%E2%80%93backward_algorithm
      * @param states A Vector that is the model states
-     * @param observations A Vector that is the model observations
+     * @param observations A Vector that represents the observations sequence
      * @return A Vector which contains the Beta values
      */
 
