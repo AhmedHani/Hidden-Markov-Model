@@ -101,7 +101,8 @@ public class Validator {
                     }
                 }
 
-                if (found) break;
+                if (found)
+                    break;
             }
 
             if (!found)
