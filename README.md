@@ -12,6 +12,7 @@ After I finish the implementation, I will put the full tutorial of HMM and the j
 * Data Validation for an HMM
 * Forward-Backward Algorithm
 * Viterbi Algorithm
+* Baum-Welch Algorithm
 
 ## Json Reader
 You can create your model using Json files. In the repository, you will see an example of a model written in a specific expression.
