@@ -479,5 +479,82 @@ public class HiddenMarkovModel {
                 gamma.elementAt(i).put(state, gamma.elementAt(i).get(state) / probabilitySum);
             }
         }
+
+        Vector<Hashtable<String, Hashtable<String, Double>>> eps = new Vector<Hashtable<String, Hashtable<String, Double>>>();
+
+        for (int i = 0; i < states.size(); i++) {
+            double probabilitySum = 0.0;
+            eps.add(new Hashtable<String, Hashtable<String, Double>>());
+            for (String fromState : states) {
+                eps.elementAt(i).put(fromState, new Hashtable<String, Double>());
+                for (String toState : states) {
+                    double tempProbability = this.alpha.elementAt(i).get(fromState)
+                            * this.beta.elementAt(i + 1).get(toState)
+                            * this.getTransitionValue(fromState, toState)
+                            * this.getEmissionValue(toState, states.elementAt(i + 1));
+
+                     eps.elementAt(i).get(fromState).put(toState, tempProbability);
+                    probabilitySum += tempProbability;
+                 }
+            }
+
+            for (String from : states) {
+                for (String to : states) {
+                    eps.elementAt(i).get(from).put(to, eps.elementAt(i).get(from).get(to) / probabilitySum);
+                }
+            }
+        }
+
+        for (String state : states) {
+            double updated = (gamma.elementAt(0).get(state) + smoothing) / (1 + (states.size() * smoothing));
+            this.initialProbabilities.put(state, updated);
+
+            double gammaProbabilitySum = 0.0;
+            for (int i = 0; i < states.size() - 1; i++) {
+                gammaProbabilitySum += gamma.elementAt(i).get(state);
+            }
+
+            if (gammaProbabilitySum > 0) {
+                double denominator = gammaProbabilitySum + smoothing * states.size();
+                for (String to : states) {
+                    double epsSum = 0.0;
+                    for (int i = 0; i < states.size() - 1; i++) {
+                        epsSum += eps.elementAt(i).get(state).get(to);
+                        this.transitionMatrix.put(new Pair<String, String>(state, to), (smoothing + epsSum) / denominator);
+                    }
+                }
+            } else {
+                for (String to : states) {
+                    this.transitionMatrix.put(new Pair<String, String>(state, to), 0.0);
+                }
+            }
+
+            gammaProbabilitySum = 0.0;
+
+            for (int i = 0; i < states.size(); i++) {
+                gammaProbabilitySum += gamma.elementAt(i).get(state);
+            }
+
+            Hashtable<String, Double> emissionProbabilitySums = new Hashtable<String, Double>();
+
+            for (String observation : observations) {
+                emissionProbabilitySums.put(observation, 0.0);
+            }
+
+            for (int i = 0; i < states.size(); i++) {
+                emissionProbabilitySums.put(observations.elementAt(i), emissionProbabilitySums.get(observations.elementAt(i)) + gamma.elementAt(i).get(state));
+            }
+
+            if (gammaProbabilitySum > 0) {
+                double denominator = gammaProbabilitySum + smoothing * observations.size();
+                for (String observation : observations) {
+                    this.emissionMatrix.put(new Pair<String, String>(state, observation), (smoothing + emissionProbabilitySums.get(observation)) / denominator);
+                }
+            } else {
+                for (String observation : observations) {
+                    this.emissionMatrix.put(new Pair<String, String>(state, observation), 0.0);
+                }
+            }
+        }
     }
 }
